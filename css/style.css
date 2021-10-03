@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/nature-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    cursor: none;
+    overflow: hidden;
+}
+.drone-container{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transition: all ease 200ms;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+.drone-wing {
+    background: #3F3D56;
+    width: 50px;
+    height: 10px;
+    border-radius: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: ease 200ms;
+    animation: flying .2s linear infinite;
+}
+.drone-wing.wing-right{
+    top: 1%;
+    left: 78%;
+}
+.drone-wing.wing-left{
+    top: 1%;
+    left: -7%;
+}
+
+#dronix{
+    width: calc(532px / 3);
+    height: calc(305px / 3);
+}
+
+@keyframes flying {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
